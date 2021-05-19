@@ -2,11 +2,18 @@
 from coinbase.wallet.client import Client
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
+import json
 
+# Opening JSON file
+cb_file = open('/Users/nevaanperera/MachineLearningProjects/coinbase/credentials/cb_credentials.json')
+  
+# returns JSON object as 
+# a dictionary
+cb_credentials = json.load(cb_file)
 # CREDENTIALS
-key = '6B2PP2EzxhlJUuSt'
-scrt = 'gWnDBqpm3C8GxzeqJFdoSndjtZT23vx5'
-GOOGLE_CREDS = '/Users/nevaanperera/MachineLearningProjects/coinbase/credentials/credentials.json'
+key = cb_credentials['key']
+scrt = cb_credentials['scrt']
+GOOGLE_CREDS = '/Users/nevaanperera/MachineLearningProjects/coinbase/credentials/g_credentials.json'
 
 # ALL FUNCTIONS
 def create_coinbase_client(key,scrt):
