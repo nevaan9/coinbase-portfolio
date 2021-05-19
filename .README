@@ -1,1 +1,7 @@
-Credits to: https://levelup.gitconnected.com/tracking-your-coinbase-portfolio-performance-using-python-google-sheets-57d86d687547
+Getting up and running:
+ conda env create --prefix ./env -f environment.yml
+ ./run.sh
+
+
+Credits to: 
+ https://levelup.gitconnected.com/tracking-your-coinbase-portfolio-performance-using-python-google-sheets-57d86d687547
